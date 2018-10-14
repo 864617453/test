@@ -107,6 +107,7 @@
 		</dependency>
 	</dependencies>
 	<!-- 配置tomcat插件 -->
+	<!--因为<path>/</path>所以程序-->
 	<build>
 		<plugins>
 			<plugin>
