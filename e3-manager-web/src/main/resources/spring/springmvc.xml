@@ -15,6 +15,10 @@
 	<context:component-scan base-package="cn.e3mall.controller" />
 	<!--开启注解-->
 	<mvc:annotation-driven />
+	<!--不拦截静态资源,用于当url-pattern为/时
+      会拦截css js等静态资源当配此后,资源映射就将不用再配置
+         -->
+	<mvc:default-servlet-handler/>
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
