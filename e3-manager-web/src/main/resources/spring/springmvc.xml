@@ -40,7 +40,9 @@
 	<dubbo:application name="e3-manager-web"/>
 	<!--指定连接注册中心的地址-->
 	<dubbo:registry protocol="zookeeper" address="192.168.25.160:2181"/>
-	<!--引用dubbo的服务,从注册中心取-->
+	<!--引用dubbo的服务,从注册中心取
+   其接口为在service中配置后再注册过的服务这里获取
+-->	
 	<dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService" />
 	<dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService" />
 	<dubbo:reference interface="cn.e3mall.content.service.ContentCategoryService" id="contentCategoryService" />
